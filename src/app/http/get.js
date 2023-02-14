@@ -1,6 +1,6 @@
-import BASE from './base';
+import RecetaService from './RecetaService';
 
-export default class RecipeList extends BASE {
+export default class RecipeList extends RecetaService {
   state = {
     Recetas: []
   }

@@ -1,6 +1,6 @@
-import BASE from './base';
+import RecetaService from './RecetaService';
 
-export default class RecipeRemoval extends BASE {
+export default class RecipeRemoval extends RecetaService {
   state = {
     id: '',
   }

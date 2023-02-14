@@ -1,9 +1,9 @@
-import BASE from './base';
+import RecetaService from './RecetaService';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 
 
-export default class RecipePostage extends BASE {
+export default class RecipePostage extends RecetaService {
 
 
 

@@ -1,4 +1,4 @@
-import API from "./api";
+import apiador from './api';
 import React from 'react';
 
 
