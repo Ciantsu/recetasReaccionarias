@@ -9,12 +9,14 @@ import RecipeList from './app/http/get';
 import RecipeRemoval from './app/http/delete';
 import RecipePutage from './app/http/put';
 import RecipePostage from './app/http/post';
+import BarritaAlta from './app/features/topbar/topbar';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },   
+  },
   {
     path: "/list",
     element: <RecipeList />,
@@ -37,7 +39,14 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <div>
+      <div>
+        <BarritaAlta />
+      </div>
+      <div>
+        <RouterProvider router={router} />
+      </div>
+    </div>
   </React.StrictMode>
 );
 

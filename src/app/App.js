@@ -1,13 +1,15 @@
-import BarritaAlta from './features/topbar/topbar';
+
 import './App.css';
 
 
 function App() {
   return (
-    <div className="App">
-      <BarritaAlta />
-      <h1>hi</h1>
+    <div>
+      <div className="App">
+        <h1>nya</h1>
+      </div>
     </div>
+
   );
 }
 

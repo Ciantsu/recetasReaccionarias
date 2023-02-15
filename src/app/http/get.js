@@ -12,7 +12,7 @@ export default class RecipeList extends RecetaService {
   render() {
     const recipeList = this.state.Recetas.map(
       receta => <li key={receta.id.toString()}>
-        {receta.title}</li>)
+        "{receta.title}" tiene el id "{receta.id}"</li>)
     return (
       <ul>
         {recipeList}
