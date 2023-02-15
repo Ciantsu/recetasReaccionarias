@@ -1,31 +1,39 @@
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import RecetaService from './RecetaService';
 
+
+
 export default class RecipeRemoval extends RecetaService {
-  state = {
-    id: '',
-  }
 
-  handleChange = event => {
-    this.setState({ id: event.target.value });
-  }
 
-  handleSubmit = event => {
-    event.preventDefault();
-
-    this.borrar(`${this.state.id}`)
-  }
 
   render() {
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Recipe ID:
-            <input type="text" name="id" onChange={this.handleChange} />
-          </label>
-          <button type="submit">Delete</button>
-        </form>
-      </div>
-    )
-  }
+    return <div>
+
+      <h1>Borrando!!!</h1>
+      <Formik
+        initialValues={{
+          id: ''
+        }}
+
+        onSubmit={(recipe) => {
+          this.borrar(`${recipe.id}`)
+            
+        }
+        }
+
+      >
+        {({
+          isSubmitting }) => (
+          <Form>
+            <Field type="text" name="id" />
+            <ErrorMessage name="id" component="div" />
+            <button type="submit" >
+              Delete
+            </button>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  };
 }

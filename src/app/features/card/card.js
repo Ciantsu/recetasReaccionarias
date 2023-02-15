@@ -21,11 +21,11 @@ function BgColorExample() {
           style={{ width: '18rem' }}
           className="mb-2"
         >
-          <Card.Header>{props.id}</Card.Header>
+          <Card.Header>a</Card.Header>
           <Card.Body>
-            <Card.Title>{props.title} </Card.Title>
+            <Card.Title>e </Card.Title>
             <Card.Text>
-                {props.description}
+                i
             </Card.Text>
           </Card.Body>
         </Card>

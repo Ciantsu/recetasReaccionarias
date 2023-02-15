@@ -10,7 +10,7 @@ export default class RecipePostage extends RecetaService {
   render() {
     return <div>
 
-      <h1>SUbiendo!!!</h1>
+      <h1>Subiendo!!!</h1>
       <Formik
         initialValues={{
           title: '',
