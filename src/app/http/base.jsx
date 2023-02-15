@@ -5,8 +5,12 @@ import React from 'react';
 
 export default class BASE extends React.Component {
 
+    constructor(url) {
+        super()
+        this.client = apiador(url)
+    }
   traerTodas() {
-    API.get()
+    this.client.get()
       .then(res => {
         const Recetas = res.data;
         this.setState({ Recetas });
@@ -14,7 +18,7 @@ export default class BASE extends React.Component {
   }
 
   borrar(id) {
-    API.delete(id)
+    this.client.delete(id)
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -22,7 +26,7 @@ export default class BASE extends React.Component {
   }
 
   subir(recipe) {
-    API.post('', recipe)
+    this.client.post('', recipe)
     .then(res => {
       console.log(res);
       console.log(res.data);
@@ -30,7 +34,7 @@ export default class BASE extends React.Component {
   }
 
   cambiar(id, recipe) {
-    API.put(id, recipe)
+    this.client.put(id, recipe)
     .then(res => {
       console.log(res);
       console.log(res.data);

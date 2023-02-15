@@ -5,10 +5,10 @@ import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
-import RecipeList from './app/http/get';
-import RecipeRemoval from './app/http/delete';
-import RecipePutage from './app/http/put';
-import RecipePostage from './app/http/post';
+import RecipeGetage from './app/features/trying-http-requests/get';
+import RecipeRemoval from './app/features/trying-http-requests/delete';
+import RecipePutage from './app/features/trying-http-requests/put';
+import RecipePostage from './app/features/trying-http-requests/post';
 import BarritaAlta from './app/features/topbar/topbar';
 
 
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/list",
-    element: <RecipeList />,
+    element: <RecipeGetage />,
   },
   {
     path: "/add",
